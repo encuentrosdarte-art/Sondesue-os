@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Son de Sueños · Conciertos & Entradas</title>
+  <meta name="description" content="Son de Sueños - Venta de entradas para conciertos y eventos musicales. Vive la música, persigue tus sueños." />
+  <link rel="icon" type="image/jpeg" href="images/logo.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Dancing+Script:wght@600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-brand">
+        <img src="images/logo.jpeg" alt="Logo Son de Sueños" class="nav-logo" />
+        <span class="nav-brand-text">Son de Sueños</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#generos">Géneros</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Conciertos · Entradas</p>
+      <h1 class="hero-title">Son de Sueños</h1>
+      <p class="hero-subtitle">Donde la música se convierte en recuerdos. Descubre los mejores conciertos y consigue tus entradas en un solo lugar.</p>
+      <div class="hero-actions">
+        <a href="#eventos" class="btn btn-primary">Ver eventos</a>
+        <a href="#nosotros" class="btn btn-ghost">Conócenos</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Desliza</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- EVENTOS -->
+  <section class="section" id="eventos">
+    <div class="section-head">
+      <p class="section-eyebrow">Próximamente</p>
+      <h2 class="section-title">Eventos &amp; Conciertos</h2>
+      <p class="section-desc">Asegura tu lugar en los espectáculos más esperados. Entradas limitadas.</p>
+    </div>
+    <div class="events-grid" id="eventsGrid"></div>
+  </section>
+
+  <!-- GÉNEROS -->
+  <section class="section section-alt" id="generos">
+    <div class="section-head">
+      <p class="section-eyebrow">Para todos los gustos</p>
+      <h2 class="section-title">Géneros Musicales</h2>
+      <p class="section-desc">Vibra con el estilo que más te apasiona.</p>
+    </div>
+    <div class="genres-grid" id="genresGrid"></div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="section" id="nosotros">
+    <div class="about">
+      <div class="about-media">
+        <img src="images/logo.jpeg" alt="Son de Sueños" />
+      </div>
+      <div class="about-text">
+        <p class="section-eyebrow">Nosotros</p>
+        <h2 class="section-title">Hacemos realidad la música que sueñas</h2>
+        <p>En <strong>Son de Sueños</strong> creemos que cada concierto es una experiencia inolvidable. Nos dedicamos a acercarte los mejores eventos musicales, ofreciendo una venta de entradas sencilla, segura y transparente.</p>
+        <p>Nuestra pasión es la música y nuestro compromiso eres tú. Acompáñanos a vivir momentos que perdurarán para siempre.</p>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-num">+50</span><span class="stat-label">Eventos</span></div>
+          <div class="stat"><span class="stat-num">+10k</span><span class="stat-label">Asistentes</span></div>
+          <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Seguro</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section section-alt" id="contacto">
+    <div class="section-head">
+      <p class="section-eyebrow">Hablemos</p>
+      <h2 class="section-title">Contacto</h2>
+      <p class="section-desc">¿Tienes dudas sobre un evento o tu entrada? Escríbenos.</p>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu correo electrónico" required />
+      </div>
+      <input type="text" name="asunto" placeholder="Asunto" />
+      <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+      <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+      <p class="form-feedback" id="formFeedback"></p>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.jpeg" alt="Son de Sueños" class="footer-logo" />
+        <div>
+          <span class="footer-name">Son de Sueños</span>
+          <span class="footer-tag">Conciertos · Entradas</span>
+        </div>
+      </div>
+      <nav class="footer-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#generos">Géneros</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p>&copy; <span id="year"></span> Son de Sueños. Todos los derechos reservados.</p>
+      <p>Elisabeth Borrallo Nieto - 48989660M (como persona física)</p>
+    </div>
+  </footer>
+
+  <!-- MODAL DE COMPRA -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">&times;</button>
+      <h3 class="modal-title" id="modalTitle">Comprar entradas</h3>
+      <p class="modal-event" id="modalEvent"></p>
+      <form id="purchaseForm">
+        <label>Nombre completo
+          <input type="text" name="nombre" required />
+        </label>
+        <label>Correo electrónico
+          <input type="email" name="email" required />
+        </label>
+        <div class="modal-row">
+          <label>Cantidad
+            <input type="number" name="cantidad" min="1" max="10" value="1" id="ticketQty" required />
+          </label>
+          <div class="modal-total">
+            <span>Total</span>
+            <strong id="modalTotal">30€</strong>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Confirmar compra</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
