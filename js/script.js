@@ -11,7 +11,7 @@ const eventos = [
     priceNote: "30€ + 10% IVA",
     capacity: "Aforo limitado: 500 personas",
     image: "images/paco-candela.jpeg",
-    ticketUrl: "https://www.eventbrite.com/e/paco-candela-concert-tickets-1994799329493",
+    ticketUrl: "https://buytickets.at/sondesueos/2324792",
     emoji: "💃"
   }
 ];
