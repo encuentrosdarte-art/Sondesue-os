@@ -97,7 +97,12 @@
       <h2 class="section-title">Contacto</h2>
       <p class="section-desc">¿Tienes dudas sobre un evento o tu entrada? Escríbenos.</p>
     </div>
-    <form class="contact-form" id="contactForm">
+    <form class="contact-form" id="contactForm" action="https://formsubmit.co/sondesuenos@gmail.com" method="POST">
+      <!-- Configuración FormSubmit -->
+      <input type="hidden" name="_subject" value="Nuevo mensaje desde Son de Sueños" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="text" name="_honey" style="display:none" />
       <div class="form-row">
         <input type="text" name="nombre" placeholder="Tu nombre" required />
         <input type="email" name="email" placeholder="Tu correo electrónico" required />

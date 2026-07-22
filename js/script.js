@@ -136,11 +136,45 @@ document.addEventListener('DOMContentLoaded', () => {
     e.target.reset();
   });
 
-  // Formulario de contacto
-  document.getElementById('contactForm').addEventListener('submit', (e) => {
+  // Formulario de contacto (envío vía FormSubmit AJAX)
+  const contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    document.getElementById('formFeedback').textContent =
-      '¡Gracias por escribirnos! Te responderemos lo antes posible.';
-    e.target.reset();
+    const feedback = document.getElementById('formFeedback');
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando…';
+    feedback.style.color = '';
+    feedback.textContent = '';
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/sondesuenos@gmail.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre: contactForm.nombre.value,
+          email: contactForm.email.value,
+          asunto: contactForm.asunto.value,
+          mensaje: contactForm.mensaje.value,
+          _subject: 'Nuevo mensaje desde Son de Sueños',
+          _template: 'table'
+        })
+      });
+
+      if (response.ok) {
+        feedback.style.color = 'var(--gold-light)';
+        feedback.textContent = '¡Gracias por escribirnos! Hemos recibido tu mensaje y te responderemos lo antes posible.';
+        contactForm.reset();
+      } else {
+        throw new Error('Error en el envío');
+      }
+    } catch (err) {
+      feedback.style.color = '#e08a8a';
+      feedback.textContent = 'No hemos podido enviar tu mensaje. Escríbenos directamente a sondesuenos@gmail.com.';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+    }
   });
 });
