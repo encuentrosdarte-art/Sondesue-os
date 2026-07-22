@@ -3,12 +3,15 @@
 // --- Datos de eventos ---
 const eventos = [
   {
-    title: "Paco Candela en Concierto",
+    title: "Paco Candela · 30 Aniversario",
     artist: "Paco Candela",
-    venue: "Villanueva del Río y Minas",
-    date: "Próximamente",
-    price: "30€",
-    priceValue: 30,
+    venue: "Pozo 5 · Villanueva del Río y Minas, Sevilla",
+    date: "19 de septiembre de 2026 · 22:00 h",
+    price: "33€",
+    priceNote: "30€ + 10% IVA",
+    capacity: "Aforo limitado: 500 personas",
+    image: "images/paco-candela.jpeg",
+    ticketUrl: "https://www.eventbrite.es/e/1994788618456?aff=oddtdtcreator",
     emoji: "💃"
   }
 ];
@@ -30,17 +33,26 @@ function renderEventos() {
   const grid = document.getElementById('eventsGrid');
   if (!grid) return;
   grid.innerHTML = eventos.map((e, i) => `
-    <article class="event-card">
-      <div class="event-emoji">${e.emoji}</div>
-      <h3 class="event-title">${e.title}</h3>
-      <p class="event-artist">${e.artist}</p>
-      <div class="event-meta">
-        <span>📍 ${e.venue}</span>
-        <span>📅 ${e.date}</span>
-      </div>
-      <div class="event-footer">
-        <span class="event-price">${e.price}</span>
-        <button class="btn btn-primary" data-event="${i}">Comprar entradas</button>
+    <article class="event-card${e.image ? ' event-card--poster' : ''}">
+      ${e.image ? `<div class="event-poster"><img src="${e.image}" alt="Cartel ${e.title}" loading="lazy" /></div>` : ''}
+      <div class="event-body">
+        ${e.image ? '' : `<div class="event-emoji">${e.emoji}</div>`}
+        <h3 class="event-title">${e.title}</h3>
+        <p class="event-artist">${e.artist}</p>
+        <div class="event-meta">
+          <span>📍 ${e.venue}</span>
+          <span>📅 ${e.date}</span>
+          ${e.capacity ? `<span>🎟️ ${e.capacity}</span>` : ''}
+        </div>
+        <div class="event-footer">
+          <div class="event-price-wrap">
+            <span class="event-price">${e.price}</span>
+            ${e.priceNote ? `<span class="event-price-note">${e.priceNote}</span>` : ''}
+          </div>
+          ${e.ticketUrl
+            ? `<a class="btn btn-primary" href="${e.ticketUrl}" target="_blank" rel="noopener">Comprar entradas</a>`
+            : `<button class="btn btn-primary" data-event="${i}">Comprar entradas</button>`}
+        </div>
       </div>
     </article>
   `).join('');
