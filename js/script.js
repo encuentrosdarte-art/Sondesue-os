@@ -11,7 +11,7 @@ const eventos = [
     priceNote: "30€ + 10% IVA",
     capacity: "Aforo limitado: 500 personas",
     image: "images/paco-candela.jpeg",
-    ticketUrl: "https://www.eventbrite.es/e/1994788618456?aff=oddtdtcreator",
+    ticketUrl: "https://www.eventbrite.com/e/paco-candela-concert-tickets-1994799329493",
     emoji: "💃"
   }
 ];
