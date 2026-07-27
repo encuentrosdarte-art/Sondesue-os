@@ -7,7 +7,7 @@ const eventos = [
     artist: "Paco Candela",
     venue: "Pozo 5 · Villanueva del Río y Minas, Sevilla",
     date: "19 de septiembre de 2026 · 22:00 h",
-    price: "35€",
+    price: "30€",
     capacity: "Aforo limitado: 500 personas",
     image: "images/paco-candela.jpeg",
     ticketUrl: "https://buytickets.at/sondesueos/2324792",
