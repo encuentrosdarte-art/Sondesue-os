@@ -17,7 +17,7 @@ const eventos = [
     title: "DJ Concert | ISMAEL CHACON DJ",
     artist: "ISMAEL CHACON DJ",
     venue: "Villanueva del Río y Minas - Pozo 5",
-    date: "Sábado 19 de septiembre de 2026 · A partir de las 24:00 h",
+    date: "29 de octubre de 2026 · 17:45 h",
     price: "13€",
     priceNote: "Consumición incluida",
     image: "images/ismael-chacon-dj.jpeg",
